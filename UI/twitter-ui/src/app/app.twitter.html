@@ -1,0 +1,15 @@
+<div>
+    <ul>
+        <li *ngFor="let tweet of tweets" >
+            <div [style.background-color] = "getbg(tweet.sentiments)"  [style.color] = "getfg(tweet.sentiments)" style="height: 150px;padding: 3px">
+               <div style="font-size: 110%"><b> {{tweet.author}} </b></div>
+                <br />
+                {{tweet.post}} <br />
+                {{tweet.sentiments}}
+            <br />
+            </div>
+           
+        </li>
+    </ul>
+   
+</div>

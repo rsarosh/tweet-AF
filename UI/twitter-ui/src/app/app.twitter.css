@@ -1,0 +1,16 @@
+li {
+    font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+    margin: 1px;
+    float: left;
+    width: 30%;
+    min-width: 300px;
+    
+  }
+
+  ul{
+    margin: 10;
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+  
+  }
