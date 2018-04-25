@@ -52,7 +52,7 @@ namespace ReadT
             cognitiveSecrate = ConfigurationManager.AppSettings["CongnitiveConsumerSecret"];
 
             _twitter = new Twitter(twConsumerKey, twConsumerSecrate);
-            _cognitiveSvc = new CognitiveSvc(cognitiveKey, cognitiveSecrate);
+         //   _cognitiveSvc = new CognitiveSvc(cognitiveKey, cognitiveSecrate);
 
             Client<Tweet>.Initialize(ConfigurationManager.AppSettings["Database"],
                                                          ConfigurationManager.AppSettings["Collection"],
@@ -87,13 +87,13 @@ namespace ReadT
                         Tweet t = new Tweet();
                         t.Author = _t.Author;
                         t.Post = _t.Post;
-                        t.Sentiments = _cognitiveSvc.GetSentiments(_t.Post).Result; ;
+                        t.Sentiments = 0; // _cognitiveSvc.GetSentiments(_t.Post).Result; ;
                         Document doc = await Client<Tweet>.CreateItemAsync(t);
                         Console.Write("*");
                     };
                     Console.Write(".");
                 }
-                Thread.Sleep(30000); // Sleep 5 Sec
+                Thread.Sleep(30000); // Sleep 30 Sec
             } while (true);
 
         }
