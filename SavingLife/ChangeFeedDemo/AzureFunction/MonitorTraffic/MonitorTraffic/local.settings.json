@@ -1,0 +1,8 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=scmrstorage;AccountKey=--YOUR STOREAGE KEY--;EndpointSuffix=core.windows.net",
+    "AzureWebJobsDashboard": "DefaultEndpointsProtocol=https;AccountName=scmrstorage;AccountKey=--YOUR STOREAGE KEY--;EndpointSuffix=core.windows.net",
+    "DBConnection": "AccountEndpoint=https://rafat-metric-demo.documents.azure.com:443/;AccountKey=--YOUR KEY--;"
+  }
+}
