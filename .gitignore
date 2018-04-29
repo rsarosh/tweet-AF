@@ -29,3 +29,6 @@ Twitter/AF/TwitterFunction/.vs/
 Twitter/ReadTwitter/ReadT/ReadT/obj/
 Twitter/MT/GetTweetsCore/GetTweetsCore/obj/
 SavingLife/ChangeFeedDemo/.vs/
+keys.txt
+ChangeFeed/ChangeFeedProcessorV2/.vs/
+ChangeFeed/ChangeFeedWithClientSDK/.vs/
