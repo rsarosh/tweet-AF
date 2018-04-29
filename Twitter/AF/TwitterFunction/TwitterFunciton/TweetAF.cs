@@ -21,13 +21,13 @@ namespace TweeterFunciton
         {
             if (_cognitiveSvc == null)
             {
-                _cognitiveSvc = new CognitiveSvc("Ocp-Apim-Subscription-Key", "d42e7ac9cbd04cd8b1af8daf81921810");
+                _cognitiveSvc = new CognitiveSvc("Ocp-Apim-Subscription-Key", "Key");
             }
 
             //Queue Conneciton
             Microsoft.WindowsAzure.Storage.Queue.CloudQueueClient queueClient;
             Microsoft.WindowsAzure.Storage.Queue.CloudQueue queue;
-            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=scmrstorage;AccountKey=FtW5Qlz/5rWiqX0MPlGO0X2anGs5t7ea/H/ZkdcIEHlTA9isEinpscnuuhw8GwKR+7+Eo2IDRG1jwdMoDsRTqg==;EndpointSuffix=core.windows.net");
+            CloudStorageAccount storageAccount = CloudStorageAccount.Parse("DefaultEndpointsProtocol=https;AccountName=scmrstorage;AccountKey=AccountKey;EndpointSuffix=core.windows.net");
             queueClient = storageAccount.CreateCloudQueueClient();
             queue = queueClient.GetQueueReference("tweetqueue");
 
