@@ -94,9 +94,9 @@
                     collectionUri,
                     new ChangeFeedOptions
                     {
-                        PartitionKeyRangeId = "0", //pkRange.Id,
+                        PartitionKeyRangeId = pkRange.Id,  //3
                         StartFromBeginning = true,
-                        RequestContinuation = "945270", //continuation,
+                        RequestContinuation = continuation, //"945270"
                         MaxItemCount = 1,
                         // Set reading time: only show change feed results modified since StartTime
                         StartTime = DateTime.Now - TimeSpan.FromSeconds(30000000)

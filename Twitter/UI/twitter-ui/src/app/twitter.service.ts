@@ -26,7 +26,7 @@ export class TwitterService {
 
   getTweetFromService (): Observable<{}| Tweet[]>{
     return  this.http.get <Tweet[]> ("http://localhost:59767/api/tweet").pipe(
-        tap(_ => this.tweets.unshift(..._))
+        tap(_  => this.tweets.unshift(..._))
       );
     
         

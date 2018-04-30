@@ -25,7 +25,7 @@ namespace MonitorTraffic
 
             foreach (var doc in documents)
             {
-                if (doc.GetPropertyValue<string>("iotid") == "AA")
+                if (doc.GetPropertyValue<string>("accident") == "true")
                 {
                     string m = String.Format("{{ \"lat\": {0}, \"long\": {1}, \"carId\": \"{2}\" }}",
                                         doc.GetPropertyValue<string>("lat"),

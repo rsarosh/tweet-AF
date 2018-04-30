@@ -49,7 +49,7 @@ namespace ChangeFeedProcessorV2
         /// <returns>A Task to allow asynchronous execution</returns>
         public Task OpenAsync(IChangeFeedObserverContext context)
         {
-            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Observer opened for partition Key Range: {0}", context.PartitionKeyRangeId);
             return Task.CompletedTask;
         }

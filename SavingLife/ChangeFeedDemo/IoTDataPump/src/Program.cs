@@ -90,7 +90,7 @@ namespace IotPumpData
                 if (docCtr++ > DOC_PER_THREAD) docCtr = 0;
                 InsertData(rnd.Next(min, max), "AA");// iots[ctr++]);
 
-                Console.Write(".");
+                Console.Write("*");
 
                 ConsoleKeyInfo k = Console.ReadKey();
 
@@ -128,7 +128,7 @@ namespace IotPumpData
                 id = Guid.NewGuid().ToString(),
                 iotid = _iotid,
                 temp = _temp,
-
+                accident = "true",
                 lat = 47.639002,
                 //r.Next(100),
                 longitude = -122.128196,//r.Next(100),
@@ -164,7 +164,10 @@ namespace IotPumpData
         [JsonProperty("timestamp")]
         public long timestamp;
 
-        public static explicit operator IoTData (Document doc)
+        [JsonProperty("accident")]
+        public string accident;
+
+    public static explicit operator IoTData (Document doc)
         {
             IoTData _iotData = new IoTData();
             _iotData.id = doc.Id;

@@ -123,8 +123,8 @@ namespace ChangeFeedProcessorV2
                 can customize MaxItemCount, PartitonKeyRangeId, RequestContinuation, SessionToken and StartFromBeginning
             */
 
-         //   feedOptions.StartFromBeginning = true;
-            feedOptions.RequestContinuation = "943518";  //this is ignored if there is lease
+            feedOptions.StartFromBeginning = true;
+          
             ChangeFeedProcessorOptions feedProcessorOptions = new ChangeFeedProcessorOptions();
             
             // ie. customizing lease renewal interval to 15 seconds
@@ -159,7 +159,8 @@ namespace ChangeFeedProcessorV2
         /// <param name="collectionName">Name of collection</param>
         /// <param name="throughput">Amount of throughput to provision</param>
         /// <returns>A Task to allow asynchronous execution</returns>
-        public async Task CreateCollectionIfNotExistsAsync(string endPointUri, string secretKey, string databaseName, string collectionName, int throughput)
+        public async Task CreateCollectionIfNotExistsAsync(string endPointUri, string secretKey, string databaseName,
+                            string collectionName, int throughput)
         {
             // connecting client 
             using (DocumentClient client = new DocumentClient(new Uri(endPointUri), secretKey))
